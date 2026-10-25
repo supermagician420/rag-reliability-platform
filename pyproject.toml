@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-reliability-lab"
+version = "0.1.0"
+description = "A zero-dependency grounded RAG lab with citation checks, abstention, and an offline eval harness."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "supermagician420" }]
+keywords = ["rag", "retrieval", "grounding", "citations", "llm", "sqlite"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+raglab = "raglab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["raglab*"]
+
+[tool.setuptools.package-data]
+raglab = ["eval_cases.json", "web/static/*"]

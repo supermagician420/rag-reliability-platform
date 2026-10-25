@@ -1,0 +1,12 @@
+.git
+.gitignore
+.github
+__pycache__
+*.pyc
+data/*.db
+eval_report.json
+.env
+.venv
+tests
+README.md
+Dockerfile
